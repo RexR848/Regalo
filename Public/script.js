@@ -16,6 +16,11 @@ const data = [
     titulo: "Día 2",
     texto: "Un mensaje especial para continuar con la magia del calendario."
   }
+  {
+    id: 3,
+    titulo: "Día 3",
+    texto: "Un mensaje especial para continuar con la magia del calendario."
+  }
 ]
 
 const grid = document.getElementById("grid")
