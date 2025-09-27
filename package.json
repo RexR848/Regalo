@@ -1,5 +1,5 @@
 {
-  "name": "render-hello-world",
+  "name": "render-adviento",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -9,3 +9,4 @@
     "express": "^4.18.2"
   }
 }
+
