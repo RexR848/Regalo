@@ -19,6 +19,8 @@ const data = [
   {
     id: 3,
     titulo: "Día 3",
+    subtitulo: "hola tilin",
+    imagen: "https://decorarnavidad.com/wp-content/uploads/2019/12/viaje-alsacia-navidad.jpg",
     texto: "Un mensaje especial para continuar con la magia del calendario."
   }
 ]
