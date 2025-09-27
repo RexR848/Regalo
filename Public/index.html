@@ -14,6 +14,22 @@
     <section id="grid" class="grid"></section>
   </main>
 
+  <!-- Panel lateral derecho -->
+  <aside class="sidebar">
+    <button id="btn-codigo">Código</button>
+    <button id="btn-gacha">Gacha</button>
+  </aside>
+
+  <!-- Popup de bienvenida -->
+  <div id="welcome-popup" class="popup hidden">
+    <div class="popup-content">
+      <button class="close-btn" id="close-welcome">✕</button>
+      <h2>Bienvenido</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Disfruta del calendario.</p>
+    </div>
+  </div>
+
+  <!-- Popup general de días -->
   <div id="popup" class="popup hidden">
     <div class="popup-content">
       <button class="close-btn" id="close-popup">✕</button>
@@ -21,6 +37,27 @@
       <h3 id="popup-subtitle"></h3>
       <p id="popup-text"></p>
       <img id="popup-image" alt="">
+      <a id="popup-link" target="_blank" class="hidden"></a>
+    </div>
+  </div>
+
+  <!-- Popup de código -->
+  <div id="codigo-popup" class="popup hidden">
+    <div class="popup-content">
+      <button class="close-btn" id="close-codigo">✕</button>
+      <h2>Introduce un código</h2>
+      <input type="text" id="codigo-input" placeholder="Escribe tu código">
+      <button id="enviar-codigo">Enviar</button>
+    </div>
+  </div>
+
+  <!-- Popup de gacha -->
+  <div id="gacha-popup" class="popup hidden">
+    <div class="popup-content">
+      <button class="close-btn" id="close-gacha">✕</button>
+      <h2>Gacha</h2>
+      <p>Tienes <span id="gacha-tickets">5</span> tickets.</p>
+      <button id="usar-ticket">Usar Ticket</button>
     </div>
   </div>
 
