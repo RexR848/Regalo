@@ -1,54 +1,21 @@
 const express = require("express");
 const path = require("path");
+
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-console.log("Hello World desde consola 🚀");
+// Hello World en consola
+console.log("Hello World desde el servidor 🚀");
 
-// Servir carpeta public
+// Servir la carpeta public (donde están tus HTML, CSS y JS)
 app.use(express.static(path.join(__dirname, "public")));
 
-// Ruta por defecto: enviar index.html
+// Ruta principal
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
-const express = require("express");
-const path = require("path");
-const app = express();
-
-console.log("Hello World desde consola 🚀");
-
-// Servir carpeta public
-app.use(express.static(path.join(__dirname, "public")));
-
-// Ruta por defecto: enviar index.html
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
-const express = require("express");
-const path = require("path");
-const app = express();
-
-console.log("Hello World desde consola 🚀");
-
-// Servir carpeta public
-app.use(express.static(path.join(__dirname, "public")));
-
-// Ruta por defecto: enviar index.html
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
-
-const PORT = process.env.PORT || 3000;
+// Arrancar servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
