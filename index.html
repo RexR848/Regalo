@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario de Adviento</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Calendario de Adviento - Azul Pastel</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="grid" id="calendar-grid"></div>
-    </div>
-
+    <main class="page">
+        <header class="topbar">
+            <h1 class="title">Calendario de Adviento</h1>
+            <div class="controls">
+                <button id="add-btn" class="btn">Agregar casilla</button>
+            </div>
+        </header>
+        <section id="grid" class="grid" aria-live="polite"></section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
