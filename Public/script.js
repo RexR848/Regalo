@@ -4,7 +4,7 @@ const data = [
     titulo: "Día 1",
     subtitulo: "Inicio del Adviento",
     texto: "Hoy comienza la cuenta regresiva hacia la Navidad. ¡Ábreme para descubrir tu sorpresa!",
-    imagen: "images/dia1.png",
+    imagen: "https://decorarnavidad.com/wp-content/uploads/2019/12/viaje-alsacia-navidad.jpg",
     musica: "audio/navidad.mp3",
     tiempo_inicio: 12,
     loop: true,
