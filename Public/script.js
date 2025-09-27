@@ -28,7 +28,6 @@ const imageEl = document.getElementById("popup-image")
 const linkEl = document.getElementById("popup-link")
 let audio
 
-// Crear tarjetas
 function createCard(item){
   const el = document.createElement("div")
   el.className = "card"
@@ -48,7 +47,6 @@ function openPopup(item){
   } else {
     imageEl.style.display = "none"
   }
-
   if(item.boton_texto && item.boton_url){
     linkEl.textContent = item.boton_texto
     linkEl.href = item.boton_url
@@ -56,9 +54,7 @@ function openPopup(item){
   } else {
     linkEl.classList.add("hidden")
   }
-
   popup.classList.add("active")
-
   if(item.musica){
     audio = new Audio(item.musica)
     audio.loop = item.loop || false
@@ -80,7 +76,6 @@ closeBtn.addEventListener("click", closePopup)
 popup.addEventListener("click", e => {if(e.target === popup) closePopup()})
 data.forEach(item=>createCard(item))
 
-// Bienvenida: solo 1 vez
 const welcomePopup = document.getElementById("welcome-popup")
 const closeWelcome = document.getElementById("close-welcome")
 if(!localStorage.getItem("welcomeShown")){
@@ -91,7 +86,6 @@ closeWelcome.addEventListener("click", ()=>{
   localStorage.setItem("welcomeShown", "true")
 })
 
-// Popup Código
 const codigoPopup = document.getElementById("codigo-popup")
 document.getElementById("btn-codigo").addEventListener("click", ()=>{
   codigoPopup.classList.add("active")
@@ -103,7 +97,6 @@ document.getElementById("enviar-codigo").addEventListener("click", ()=>{
   alert("Código enviado: " + document.getElementById("codigo-input").value)
 })
 
-// Popup Gacha (base)
 let tickets = 5
 const gachaPopup = document.getElementById("gacha-popup")
 document.getElementById("btn-gacha").addEventListener("click", ()=>{
