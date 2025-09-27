@@ -44,24 +44,39 @@ function createCard(item){
 }
 
 function openPopup(item){
+  // Resetear todo primero
+  titleEl.textContent = ""
+  subtitleEl.textContent = ""
+  textEl.textContent = ""
+  imageEl.style.display = "none"
+  imageEl.src = ""
+  linkEl.classList.add("hidden")
+  linkEl.textContent = ""
+  linkEl.href = "#"
+
+  // Rellenar con datos del item
   titleEl.textContent = item.titulo
-  subtitleEl.textContent = item.subtitulo || ""
-  subtitleEl.style.display = item.subtitulo ? "block" : "none"
-  textEl.textContent = item.texto
+  if(item.subtitulo){
+    subtitleEl.textContent = item.subtitulo
+    subtitleEl.style.display = "block"
+  } else {
+    subtitleEl.style.display = "none"
+  }
+  textEl.textContent = item.texto || ""
+
   if(item.imagen){
     imageEl.src = item.imagen
     imageEl.style.display = "block"
-  } else {
-    imageEl.style.display = "none"
   }
   if(item.boton_texto && item.boton_url){
     linkEl.textContent = item.boton_texto
     linkEl.href = item.boton_url
     linkEl.classList.remove("hidden")
-  } else {
-    linkEl.classList.add("hidden")
   }
+
   popup.classList.add("active")
+
+  // Musica
   if(item.musica){
     audio = new Audio(item.musica)
     audio.loop = item.loop || false
@@ -69,6 +84,7 @@ function openPopup(item){
     audio.play()
   }
 }
+
 
 function closePopup(){
   popup.classList.remove("active")

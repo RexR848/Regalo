@@ -113,6 +113,11 @@ body {
   max-width: 100%;
   margin-top: 12px;
   border-radius: 8px;
+  display: none; /* oculto por defecto */
+}
+
+#popup-link.hidden {
+  display: none;
 }
 
 
