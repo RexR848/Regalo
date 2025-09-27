@@ -1,13 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const calendarGrid = document.getElementById('calendar-grid');
-    let totalSquares = 24; // Número de casillas para el calendario (puedes aumentar este número)
+  const grid = document.getElementById('grid');
+  const addBtn = document.getElementById('add-btn');
+  let total = 24;
 
-    for (let i = 1; i <= totalSquares; i++) {
-        const square = document.createElement('div');
-        square.classList.add('square');
-        square.textContent = i;
+  function createSquare(n){
+    const el = document.createElement('div');
+    el.className = 'card';
+    el.textContent = n;
+    return el;
+  }
 
-        // Agregar la casilla al grid
-        calendarGrid.appendChild(square);
+  function renderInitial(count){
+    const fragment = document.createDocumentFragment();
+    for(let i=1;i<=count;i++){
+      fragment.appendChild(createSquare(i));
     }
+    grid.appendChild(fragment);
+  }
+
+  addBtn.addEventListener('click', () => {
+    total++;
+    const sq = createSquare(total);
+    grid.appendChild(sq);
+    sq.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+
+  renderInitial(total);
 });
