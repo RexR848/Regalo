@@ -2,15 +2,16 @@ const data = [
   {
     id: 1,
     titulo: "Día 1",
-    subtitulo: "Inicio del Adviento",
-    texto: "Hoy comienza la cuenta regresiva hacia la Navidad. ¡Ábreme para descubrir tu sorpresa!",
-    imagen: "https://decorarnavidad.com/wp-content/uploads/2019/12/viaje-alsacia-navidad.jpg",
-    musica: "audio/navidad.mp3",
-    tiempo_inicio: 12,
+    subtitulo: "Hola romina",
+    texto: "este regalo costó mucho, tiempo y dedicacion, tal que aun le faltan cosas que agregar, esto es para poder entregarlo hoy, un dia especial ya que volveremos a hablar, te amo mucho romina, este es el primer regalo",
+    imagen: "https://th.bing.com/th/id/R.f019721cea9b68b97d94234d35ea28ae?rik=F2uOZD6L2IxoTw&pid=ImgRaw&r=0",
+    musica: "audio/spp.mp3",
+    tiempo_inicio: 0,
     loop: true,
-    boton_texto: "Ir a sorpresa",
+    boton_texto: "regalo 1",
     boton_url: "https://ejemplo.com"
-  },
+  }
+  /*
   {
     id: 2,
     titulo: "Día 2",
@@ -23,6 +24,7 @@ const data = [
     imagen: "https://decorarnavidad.com/wp-content/uploads/2019/12/viaje-alsacia-navidad.jpg",
     texto: "Un mensaje especial para continuar con la magia del calendario."
   }
+  */
 ]
 
 const grid = document.getElementById("grid")
