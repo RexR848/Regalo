@@ -12,6 +12,7 @@ const data = [
     boton_url: "https://ejemplo.com"
   }
   /*
+  ,
   {
     id: 2,
     titulo: "Día 2",
